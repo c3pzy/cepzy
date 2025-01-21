@@ -1,1 +1,4 @@
-Header set Content-Security-Policy "default-src 'self'
+Header set Content-Security-Policy "default-src 'self'"
+header always set x-frame-options “Sameorigin”
+<script>alert('text')</script>
+<iframe src="http://youtube.com/embed"</iframe>
