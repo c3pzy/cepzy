@@ -1,5 +1,25 @@
 Header set Content-Security-Policy "default-src 'self'"
 header always set x-frame-options “Sameorigin”\
 Header set X-Content-Policy "default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'self';"
+Header set X-Content-Type-Options: nosniff
+Header set Referrer-Policy: origin-when-cross-origin
 <script>alert('text')</script>
 <iframe src="http://youtube.com/embed"</iframe>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://example.com; img-src 'self' data:;">
+
+
+
+
+Permissions-Policy: FEATURE ORIGIN; FEATURE ORIGIN
+
+Permissions-Policy: microphone=(), camera=()
+
+There are three options for the allowed ORIGINs of each feature.
+
+Permissions-Policy: microphone=(*) (Microphone will be allowed in this page and all framed pages)
+
+Permissions-Policy: microphone=(self) (Microphone will be allowed in this page and all framed pages if same origin)
+
+Permissions-Policy: microphone=() (Microphone will be disallowed in this page and all framed pages)
+
+Permissions-Policy: microphone=(self "https://example.com")
