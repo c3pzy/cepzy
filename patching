@@ -6,7 +6,7 @@ Header set Referrer-Policy: origin-when-cross-origin
 <script>alert('text')</script>
 <iframe src="http://youtube.com/embed"</iframe>
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://example.com; img-src 'self' data:;">
-
+Header set Permissions-Policy "geolocation=(); microphone=(); camera=()
 
 
 
